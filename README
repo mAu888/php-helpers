@@ -1,0 +1,32 @@
+README
+
+function.blockquote.php
+
+toArray() converts a string into a multidimensional array. Every occurance of > at the beginning of a line will deepen its leven in the return array.
+toQuote() converts the produced multidimensional array into a string, where each level will be surrounded by <blockquote> html elements.
+
+Example input:
+
+Hello.
+
+> I am a quote
+>> I am a nested Quote
+> I'm back on level 1
+
+Best regards
+
+-----------------------------------------
+
+Output:
+
+<blockquote>
+Hello.
+<blockquote>
+  I am a quote
+  <blockquote>
+    I am a nested Quote
+  </blockquote>
+  I'm back on level 1
+</blockquote>
+Best regards
+</blockquote>
